@@ -1,0 +1,18 @@
+version: "2.4"
+services:
+  api:
+    build: ./hello-docker
+    container_name: hello_docker_c
+    ports:
+      - "3500:3500"
+    volumes:
+      - ./hello_docker:/app
+      - ./app/node_modules
+  react_app:
+    build: ./react_app
+    container_name: react_app_c
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./react_app:/app
+      - ./app/node_modules
