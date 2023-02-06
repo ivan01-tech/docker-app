@@ -8,11 +8,11 @@ services:
     volumes:
       - ./hello_docker:/app
       - ./app/node_modules
-  react_app:
-    build: ./react_app
-    container_name: react_app_c
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./react_app:/app
-      - ./app/node_modules
+react_app:
+  build: ./react_app
+  container_name: react_app_c
+  ports:
+    - "3000:3000"
+  volumes:
+    - ./react_app:/app
+    - ./app/node_modules
